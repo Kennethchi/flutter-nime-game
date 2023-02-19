@@ -1,0 +1,98 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter doctor
+
+## exception
+
+ProcessException: ProcessException: The directory name is invalid.
+Working directory: "D:\AppData\flutter\packages\flutter_tools"
+pub env: {
+  "FLUTTER_ROOT": "D:\AppData\flutter",
+  "PUB_ENVIRONMENT": "flutter_cli:get",
+}
+
+  Command: D:\AppData\flutter\bin\cache\dart-sdk\bin\dart.EXE __deprecated_pub --verbosity=warning get --no-precompile
+
+```
+#0      _DefaultPub.get (package:flutter_tools/src/dart/pub.dart:280:9)
+<asynchronous suspension>
+#1      PubDependencies.update (package:flutter_tools/src/flutter_cache.dart:119:5)
+<asynchronous suspension>
+#2      Cache.updateAll (package:flutter_tools/src/cache.dart:677:9)
+<asynchronous suspension>
+#3      FlutterCommand.verifyThenRunCommand (package:flutter_tools/src/runner/flutter_command.dart:1325:7)
+<asynchronous suspension>
+#4      FlutterCommand.run.<anonymous closure> (package:flutter_tools/src/runner/flutter_command.dart:1209:27)
+<asynchronous suspension>
+#5      AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:150:19)
+<asynchronous suspension>
+#6      CommandRunner.runCommand (package:args/command_runner.dart:209:13)
+<asynchronous suspension>
+#7      FlutterCommandRunner.runCommand.<anonymous closure> (package:flutter_tools/src/runner/flutter_command_runner.dart:281:9)
+<asynchronous suspension>
+#8      AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:150:19)
+<asynchronous suspension>
+#9      FlutterCommandRunner.runCommand (package:flutter_tools/src/runner/flutter_command_runner.dart:229:5)
+<asynchronous suspension>
+#10     run.<anonymous closure>.<anonymous closure> (package:flutter_tools/runner.dart:62:9)
+<asynchronous suspension>
+#11     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:150:19)
+<asynchronous suspension>
+#12     main (package:flutter_tools/executable.dart:91:3)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel stable, 3.3.10, on Microsoft Windows [Version 10.0.19041.1415], locale en-CM)
+    • Flutter version 3.3.10 on channel stable at D:\AppData\flutter
+    • Upstream repository https://github.com/flutter/flutter.git
+    • Framework revision 135454af32 (), 1970-01-01 01:00:00.000
+    • Engine revision 3316dd8728
+    • Dart version 2.18.6
+    • DevTools version 2.15.0
+
+[!] Android toolchain - develop for Android devices (Android SDK version 31.0.0)
+    • Android SDK at D:\AppData\Android\Sdk
+    ✗ cmdline-tools component is missing
+      Run `path/to/sdkmanager --install "cmdline-tools;latest"`
+      See https://developer.android.com/studio/command-line for more details.
+    ✗ Android license status unknown.
+      Run `flutter doctor --android-licenses` to accept the SDK licenses.
+      See https://flutter.dev/docs/get-started/install/windows#android-setup for more details.
+
+[✓] Chrome - develop for the web
+    • Chrome at C:\Program Files\Google\Chrome\Application\chrome.exe
+
+[✓] Visual Studio - develop for Windows (Visual Studio Community 2019 16.11.15)
+    • Visual Studio at C:\Program Files (x86)\Microsoft Visual Studio\2019\Community
+    • Visual Studio Community 2019 version 16.11.32510.428
+    • Windows 10 SDK version 10.0.18362.0
+
+[✓] Android Studio (version 4.2)
+    • Android Studio at C:\Program Files\Android\Android Studio
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    • Java version OpenJDK Runtime Environment (build 11.0.8+10-b944.6842174)
+
+[✓] VS Code, 64-bit edition (version 1.72.1)
+    • VS Code at C:\Program Files\Microsoft VS Code
+    • Flutter extension can be installed from:
+      🔨 https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter
+
+[✓] Connected device (3 available)
+    • Windows (desktop) • windows • windows-x64    • Microsoft Windows [Version 10.0.19041.1415]
+    • Chrome (web)      • chrome  • web-javascript • Google Chrome 108.0.5359.125
+    • Edge (web)        • edge    • web-javascript • Microsoft Edge 103.0.1264.71
+
+[✓] HTTP Host Availability
+    • All required HTTP hosts are available
+
+! Doctor found issues in 1 category.
+```
